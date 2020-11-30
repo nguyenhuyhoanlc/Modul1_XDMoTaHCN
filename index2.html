@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature = function(C){
+        this.DoC = C;
+
+        this.TemperatureCF = function (){
+            return 9/5* this.DoC + 32 ;
+        }
+        this.TemperatureCK = function (){
+            return this.DoC + 273.15 ;
+        }
+    }
+    let a = +prompt("Nhap do C")
+    let temperature = new Temperature(a);
+    let DoCsangDoF = temperature.TemperatureCF();
+    let DoCsangDoK = temperature.TemperatureCK();
+    document.write(DoCsangDoF + "<br>");
+    document.write(DoCsangDoK);
+</script>
+</body>
+</html>
